@@ -1,0 +1,55 @@
+// main: ../style.less
+
+.subnav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+    width: 16.5rem;
+    padding: .5rem 0;
+    
+
+    background-color: @blue;
+    box-shadow: 0 6px 8px rgb(0, 0, 0, .2);
+    border-radius: 0 0 5px 5px;
+    
+    &.static {
+    @media @mobile {
+        position: static;
+        
+        padding-left: 1rem;
+        
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+}
+
+.subnav__link {
+    display: block;
+    color: @white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: .45rem 1.2rem; 
+    transition: 
+    background-color .2s 
+    ease-in-out;
+
+    &:hover {
+        background-color: rgb(27, 27, 135);
+        text-decoration: none;
+    }
+
+    @media @mobile {
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 1.4rem;
+
+        &:hover {
+            background: none;
+        }
+    }
+}

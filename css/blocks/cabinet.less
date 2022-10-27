@@ -1,0 +1,52 @@
+// main: ../style.less
+
+.cabinet {
+    display: flex;
+
+    @media @mobile {
+        flex-direction: column ;
+    }
+}
+
+.cabinet__form {
+    width: 34rem;
+
+    @media @mobile {
+        order: 2;
+    }
+}
+
+.cabinet__avatar {
+    flex-grow: 1;
+    padding-left: 11rem;
+    object-fit: cover;
+
+    img{
+        display: block;
+        height: 15rem;
+        width: 15rem;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    @media @mobile {
+        order: 1;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.cabinet__file {
+    font-size: 1.4rem;
+    color: @blue;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

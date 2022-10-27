@@ -1,0 +1,121 @@
+// main: ../style.less
+
+.add-post {
+    margin-bottom: 3rem;
+
+    background-color: @secondary;
+    box-shadow: 0 15px 25px rgb(0, 0, 0, .45);
+    border-radius: 5px;
+    padding: 1.5rem 2rem;
+
+    @media @mobile{
+        padding: 1.5rem;
+    }
+}
+
+.add-post__form {
+    display: flex;
+    align-items: flex-end;
+}
+
+.add-post__textarea {
+    display: block;
+    flex-grow: 1;
+    height: 26px;
+    overflow: hidden;
+
+    border: none;
+    background: transparent;
+    resize: none;
+
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: @white;
+
+    &::placeholder {
+        color: #d2d2d2;
+    }
+}
+
+
+.add-post__form-actions {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    width: 120px;
+
+    @media @mobile {
+        width: 8rem;
+    }
+}
+
+.add-post__file,
+.add-post__send {
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+    border: none;
+   
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color .3s linear;
+
+    @media @mobile {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+}
+
+.add-post__file {
+    background: #ebebeb 
+    url("../css/icon/add-photo.svg") center 
+    no-repeat;
+    position: relative;
+    
+    @media @mobile {
+        background-size: 18px;
+    }
+
+    img {
+       position: absolute;
+       top: 1rem;
+       right: 1rem;
+    }
+
+    input {
+        display: none;
+    }
+
+    &:hover {
+        background-color: darken(#ebebeb, 10%);
+    }
+    @media @mobile {
+        img {
+            position: absolute;
+            top: .5rem;
+            right: .6rem;
+         }
+     
+    }
+}
+
+.add-post__send {
+ background-color: @blue;
+
+ font-size: 0;
+ color: transparent;
+
+ background: @blue
+ url("../css/icon/send.svg") center 
+ no-repeat;
+
+ @media @mobile {
+    background-size: 15px;
+ }
+
+ &:hover {
+    background-color: darken(@blue, 10%);
+}
+}
+

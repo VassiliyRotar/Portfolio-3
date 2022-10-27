@@ -1,0 +1,61 @@
+// main: ../style.less
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1.1em 2.1em;
+   
+
+    border: none;
+    border-radius: 3em;
+    background: @secondary;
+    cursor: pointer;
+
+
+    line-height: 1.1;
+    text-decoration: none;
+    font-family: inherit;
+    color: @white;
+
+    transition: background-
+    color .2s linear;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--red {
+        background-color: @red;
+        border: 1px solid #CD251A;
+        box-shadow: 0 7px 17px -10px rgba(237, 48, 46, 0.2);  
+        
+        &:hover,
+        &:focus {
+        background-color: darken(@red, 5%);
+        text-decoration: none;
+    }
+}
+    &--blue {
+        background-color: @blue;
+        border: 1px solid #2A5FE7;   
+        box-shadow: 0px 7px 17px -10px rgba(36, 81, 197, 0.35); 
+       
+        &:hover
+         {
+            background-color: darken(@blue, 5%);
+        }
+    }
+
+    &--rounded {
+        border-radius: 0.41em;
+    }
+    &--sm {
+        padding: 0.6em 1.12em;
+    }
+}
+
+
+
+

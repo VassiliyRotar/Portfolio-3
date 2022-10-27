@@ -1,0 +1,46 @@
+// main: ../style.less
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+
+    @media @mobile {
+        margin-top: 5rem;
+    }
+
+}
+
+.paginaton__item {
+    margin: 0 .5rem;
+}
+
+.pagination__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-color: #0d0d0d;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .15);
+
+    font-size: 1.4rem;
+    color: @white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 4rem;
+    
+    
+    transition: background-color .3s linear;
+    
+    &:hover {
+        background-color: lighten(#0d0d0d, 2%);
+        text-decoration: none;
+    }
+
+    &.active {
+        background-color: @blue;
+        box-shadow: 0 0 10px rgba(106, 137, 216, 0.15);
+    }
+
+}
